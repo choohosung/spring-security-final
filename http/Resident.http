@@ -1,0 +1,48 @@
+GET /residents?page=0&size=3 HTTP/1.1
+Host: localhost:8080
+
+###
+
+GET /residents HTTP/1.1
+Host: localhost:8080
+
+###
+
+POST /residents HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber" : 8,
+  "name" : "추호성",
+  "id" : "user8",
+  "password" : "1234",
+  "email" : "cnghtjd3@naver.com",
+  "residentRegistrationNumber" : "980404-1231231",
+  "genderCode" : "남",
+  "birthDate" : "1998-04-04T12:30:22",
+  "birthPlaceCode" : "자택",
+  "registrationBaseAddress" : "경상남도 거제시 계룡로"
+}
+###
+
+
+PUT /residents/13 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "deathDate" : "2019-12-31T23:59:59",
+  "deathPlaceCode" : "주택",
+  "deathPlaceAddress" : "저쪽 어딘가"
+}
+
+###
+
+GET /residents/13 HTTP/1.1
+Host: localhost:8080
+
+###
+
+DELETE /residents/13 HTTP/1.1
+Host: localhost:8080
